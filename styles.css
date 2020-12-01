@@ -1,0 +1,44 @@
+body {
+	margin: 0;
+	padding: 3px;
+	background-color: black;
+	color: white;
+	font-family: Courier New
+}
+
+.btn {
+	border: 1px white solid;
+	padding: 6px;
+	margin: 3px;
+}
+
+#content, #cookieWarning {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+#textToShow, .flexText {
+	flex: 1;
+}
+
+.title {
+	padding: 3px;
+	text-align: center;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	max-width: 360px;
+	max-height: 800px;
+}
+
+.link {
+	color: white;
+}
+
+.noUnderline {
+	text-decoration: none;
+}

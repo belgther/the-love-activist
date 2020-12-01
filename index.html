@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="styles.css">
+		<script>
+		var continueText = 'Continue';
+		</script>
+		<script src="steps.js"></script>
+		<script src="engine.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="menu">
+				<div class="title">THE LOVE ACTIVIST</div>
+				<div class="btn" onclick="setCurrentStep(0)">New Game</div>
+				<div class="btn" onclick="loadGame()" id="continue">Continue</div>
+			</div>
+			<div id="content">
+				<div id="textToShow"></div>
+				<div id="buttons">
+				</div>
+			</div>
+		</div>
+		<script>currentStep=-1;renderCurrentStep()</script>
+	</body>
+</html>
