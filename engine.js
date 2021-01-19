@@ -3,6 +3,29 @@ var currentStep = -2;
 		var currentAnimationId = -1;
 		var attitudePoints = 0;
 		
+		function getCurrentLanguage() {
+			var currentLanguage = getLocalStorage().getItem('currentLanguage');
+			if (currentLanguage == null || currentLanguage.trim() == '') {
+				currentLanguage = window.navigator.language;
+			}
+			if (translations[currentLanguage] == null) {
+				currentLanguage = 'en';
+			}
+			return currentLanguage;
+		}
+		
+		function getSpeed() {
+			var speed = getLocalStorage().getItem('speed');
+			if (speed == null || speed.trim() == '') {
+				speed = '1';
+			}
+			return parseInt(speed, 10);
+		}
+		
+		function setSpeed(speed) {
+			getLocalStorage().setItem('speed', speed + '');
+		}
+		
 		function getLocalStorage() {
 		    if (window.localStorage != null) {
 		        return window.localStorage;
@@ -30,6 +53,11 @@ var currentStep = -2;
 				currentLetter = 0;
 				document.getElementById('buttons').innerHTML = '';
 				typeCurrentStep();
+			} else {
+				document.getElementById('gameTitle').innerHTML = translations[getCurrentLanguage()]['gameTitle'];
+				document.getElementById('newGameButton').innerHTML = translations[getCurrentLanguage()]['newGame'];
+				document.getElementById('continue').innerHTML = translations[getCurrentLanguage()]['continue'];
+				document.getElementById('speedTitle').innerHTML = translations[getCurrentLanguage()]['textSpeed'];
 			}
 		}
 		
@@ -51,10 +79,11 @@ var currentStep = -2;
 		}
 		
 		function typeCurrentStep() {
-			var currentText = steps[currentStep].text.substring(0, currentLetter).split('\n').join('<br/>');
+			var entireText = translations[getCurrentLanguage()][steps[currentStep].text];
+			var currentText = entireText.substring(0, currentLetter).split('\n').join('<br/>');
 			document.getElementById('textToShow').innerHTML = currentText;
-			if (currentLetter <= steps[currentStep].text.length) {
-				currentLetter++;
+			if (currentLetter <= entireText.length) {
+				currentLetter += getSpeed();
 				currentAnimationId = requestAnimationFrame(typeCurrentStep);
 			} else {
 				cancelAnimationFrame(currentAnimationId);
@@ -65,7 +94,7 @@ var currentStep = -2;
 		function displayStepButtons() {
 			var choices = steps[currentStep].choices;
 			if (choices == null || choices.length === 0) {
-				document.getElementById('buttons').appendChild(createButtonWithText('&lt;' + continueText + '&gt;', function() {
+				document.getElementById('buttons').appendChild(createButtonWithText('&lt;' + translations[getCurrentLanguage()]['continue'] + '&gt;', function() {
 				    setCurrentStep(currentStep + 1);
 				}));
 			} else {
@@ -76,7 +105,7 @@ var currentStep = -2;
 				    if (choice.minAttitude != null && attitudePoints < choice.minAttitude) {
 				        return;
 				    }
-					document.getElementById('buttons').appendChild(createButtonWithText(choice.text, function() {
+					document.getElementById('buttons').appendChild(createButtonWithText(translations[getCurrentLanguage()][choice.text], function() {
 					    if (choice.attitudePoints != null) {
 					        attitudePoints += choice.attitudePoints;
 					    }
