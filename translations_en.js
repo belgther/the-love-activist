@@ -3,6 +3,7 @@ translations['en'] = {
   "continue": "Continue",
   "gameTitle": "THE LOVE ACTIVIST",
   "textSpeed": "Text Speed",
+  "language": "Language",
   "block1text" : "DISCLAIMER\n\nAll the places, characters and events in this media, including those based on real people, and I can assure you, especially them, are entirely fictional unless their reality can be proven or is already known by everyone. The existence of people with same name and surname are pure coincidence.",
   "block2text" : "The story described here does not intend to insult anyone or anyone's opinion and it contains my personal opinion which may be freely expressed according to the legislation of the country I am living in.\nThis narration has an age restriction and by continuing, you agree that I can't be held responsible for the consequences of bypassing these age restrictions.",
   "block3text" : "CHAPTER 1\n\nA STAR IS BORN",

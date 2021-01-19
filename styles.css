@@ -12,6 +12,14 @@ body {
 	margin: 3px;
 }
 
+.dummyLanguageBtn {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 10px;
+	margin-right: 10px;
+	flex: 1;
+}
+
 .speedBtn {
 	flex: 1;
 }

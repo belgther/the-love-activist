@@ -14,6 +14,10 @@ var currentStep = -2;
 			return currentLanguage;
 		}
 		
+		function setCurrentLanguage(language) {
+			getLocalStorage().setItem('currentLanguage', language);
+		}
+		
 		function getSpeed() {
 			var speed = getLocalStorage().getItem('speed');
 			if (speed == null || speed.trim() == '') {
@@ -58,6 +62,36 @@ var currentStep = -2;
 				document.getElementById('newGameButton').innerHTML = translations[getCurrentLanguage()]['newGame'];
 				document.getElementById('continue').innerHTML = translations[getCurrentLanguage()]['continue'];
 				document.getElementById('speedTitle').innerHTML = translations[getCurrentLanguage()]['textSpeed'];
+				document.getElementById('languageTitle').innerHTML = translations[getCurrentLanguage()]['language'];
+				var languageBlocksEl = document.getElementById('languageBlocks');
+				languageBlocksEl.innerHTML = '';
+				var subLine = null;
+				var i = -1;
+				for (var key in translations) {
+					if (!translations.hasOwnProperty(key)) {
+						continue;
+					}
+					i++;
+					if ((i % 5) === 0) {
+						subLine = document.createElement('div');
+						subLine.style.display = 'flex';
+						subLine.style.width = '100%';
+						languageBlocksEl.appendChild(subLine);
+					}
+					var languageDiv = document.createElement('div');
+					languageDiv.innerHTML = key.toUpperCase();
+					languageDiv.classList.add('speedBtn');
+					languageDiv.onclick = function(e) {
+						setCurrentLanguage(e.target.innerHTML.toLowerCase());
+						renderCurrentStep();
+					}
+					subLine.appendChild(languageDiv);
+				}
+				while (subLine.children.length < 5) {
+					var dummyDiv = document.createElement('div');
+					dummyDiv.classList.add('dummyLanguageBtn');
+					subLine.appendChild(dummyDiv);
+				} 
 			}
 		}
 		
