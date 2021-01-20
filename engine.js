@@ -63,6 +63,23 @@ var currentStep = -2;
 				document.getElementById('continue').innerHTML = translations[getCurrentLanguage()]['continue'];
 				document.getElementById('speedTitle').innerHTML = translations[getCurrentLanguage()]['textSpeed'];
 				document.getElementById('languageTitle').innerHTML = translations[getCurrentLanguage()]['language'];
+				
+				var speedElements = {
+					1: document.getElementById('slowText'),
+					5: document.getElementById('normalText'),
+					20: document.getElementById('fastText'),
+					50: document.getElementById('instantText')
+				};
+				speedElements[1].innerHTML = translations[getCurrentLanguage()]['slow'];
+				speedElements[5].innerHTML = translations[getCurrentLanguage()]['normal'];
+				speedElements[20].innerHTML = translations[getCurrentLanguage()]['fast'];
+				speedElements[50].innerHTML = translations[getCurrentLanguage()]['instant'];
+				speedElements[1].classList.remove('activeSetting');
+				speedElements[5].classList.remove('activeSetting');
+				speedElements[20].classList.remove('activeSetting');
+				speedElements[50].classList.remove('activeSetting');
+				speedElements[getSpeed()].classList.add('activeSetting');
+				
 				var languageBlocksEl = document.getElementById('languageBlocks');
 				languageBlocksEl.innerHTML = '';
 				var subLine = null;
@@ -81,6 +98,9 @@ var currentStep = -2;
 					var languageDiv = document.createElement('div');
 					languageDiv.innerHTML = key.toUpperCase();
 					languageDiv.classList.add('speedBtn');
+					if (key === getCurrentLanguage()) {
+						languageDiv.classList.add('activeSetting');
+					}
 					languageDiv.onclick = function(e) {
 						setCurrentLanguage(e.target.innerHTML.toLowerCase());
 						renderCurrentStep();

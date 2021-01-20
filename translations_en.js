@@ -1,4 +1,8 @@
 translations['en'] = {
+  "slow": "Slow",
+  "normal": "Normal",
+  "fast": "Fast",
+  "instant": "Instant",
   "newGame": "New Game",
   "continue": "Continue",
   "gameTitle": "THE LOVE ACTIVIST",

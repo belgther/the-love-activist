@@ -18,11 +18,10 @@
 				<div class="btn" onclick="loadGame()" id="continue"></div>
 				<div class="title" id="speedTitle"></div>
 				<div style="display: flex">
-					<div class="speedBtn" onclick="setSpeed(1)">1</div>
-					<div class="speedBtn" onclick="setSpeed(5)">5</div>
-					<div class="speedBtn" onclick="setSpeed(20)">20</div>
-					<div class="speedBtn" onclick="setSpeed(50)">50</div>
-					<div class="speedBtn" onclick="setSpeed(1000)">1000</div>
+					<div class="speedBtn" onclick="setSpeed(1);renderCurrentStep()" id="slowText">1</div>
+					<div class="speedBtn" onclick="setSpeed(5);renderCurrentStep()" id="normalText">5</div>
+					<div class="speedBtn" onclick="setSpeed(20);renderCurrentStep()" id="fastText">20</div>
+					<div class="speedBtn" onclick="setSpeed(50);renderCurrentStep()" id="instantText">50</div>
 				</div>
 				<div class="title" id="languageTitle"></div>
 				<div id="languageBlocks">

@@ -54,3 +54,8 @@ body {
 .noUnderline {
 	text-decoration: none;
 }
+
+.activeSetting {
+	background-color: white;
+	color: black;
+}

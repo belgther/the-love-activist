@@ -1,4 +1,8 @@
 translations['tr'] = {
+  "slow": "Yavaş",
+  "normal": "Normal",
+  "fast": "Hızlı",
+  "instant": "Anında",
   "newGame": "Yeni Oyun",
   "continue": "Devam",
   "gameTitle": "SEVGİ EYLEMCİSİ",
