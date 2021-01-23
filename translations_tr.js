@@ -160,7 +160,7 @@ translations['tr'] = {
   "block86text" : "Biliyorum. Ama onu kötü göstermek ve ona kafa tutmak yeni moda, popülerliğini de artırmak için iyi bir yöntem.",
   "block87text" : "Eğer herkes bu herifin 15 yaşındaki bir kızınki kadar aklı olmadığını görürse takipçileri de ona sırt çevirecektir.",
   "block87choice1" : "Yani temelde birinin hayatını mahvediyoruz. Bu bizim tüm amaçlarımıza karşı değil mi?",
-  "block88text" : "Hayır, çünkü o bunu kendi kendine yaptı. Ve sen bu cahillere \"lider\"lerinin ne mal olduğunu gösterirsen onlar gerçeği görecek ve sen onlara sevgi vermiş olacaksın.",
+  "block88text" : "Hayır, çünkü o bunu kendi kendine yaptı. Ve sen bu kişilere \"lider\"lerinin ne mal olduğunu gösterirsen onlar gerçeği görecek ve sen onlara sevgi vermiş olacaksın.",
   "block88choice1" : "Sanırım sen haklısın. Görüşmeyi nasıl halledeceksin?",
   "block88choice2" : "Bir dakika, Fyodor ile bir görüşme ayarlayacağını da söz vermiştin bana. Önce onunla görüşmem daha doğru olmaz mı?",
   "block89text" : "Onunla görüşeceksin. Ama önce Will ile olan görüşmene odaklanmalıyız.",

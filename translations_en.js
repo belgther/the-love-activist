@@ -160,7 +160,7 @@ translations['en'] = {
   "block86text" : "I know. Making him look horrible and standing against him is the latest fashion and a good way to boost your popularity. ",
   "block87text" : "If people see that he doesn't have the wisdom of a 15 year old girl, his followers will abandon him.",
   "block87choice1" : "So we are basically ruining someone's life. Isn't it against all our motives and causes?",
-  "block88text" : "No, because he did all this by himself. And when you show these ignorant people who their \"leader\" really is, it will lead them to reality, giving them love.",
+  "block88text" : "No, because he did all this by himself. And when you show these people who their \"leader\" really is, it will lead them to reality, giving them love.",
   "block88choice1" : "I guess you are right. How will you arrange the audience?",
   "block88choice2" : "Hold on, you promised to arrange a meeting with Fyodor as well. Shouldn't I meet him first?",
   "block89text" : "You WILL meet him. But first we have to concentrate on the audience with Will.",
